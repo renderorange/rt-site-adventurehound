@@ -30,6 +30,12 @@ Works with RT 5.0
 
 - Restart your webserver
 
+# CUSTOMIZATIONS
+
+This extension adds the following customizations:
+
+- Custom logo and logo link url
+
 # BUGS
 
 Please report bugs at [GitHub Issues](https://github.com/renderorange/rt-site-adventurehound/issues).
