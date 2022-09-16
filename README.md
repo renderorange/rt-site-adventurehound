@@ -40,4 +40,8 @@ Blaine Motsinger <blaine@renderorange.com>
 
 # LICENSE AND COPYRIGHT
 
-Copyright (c) 2022 Blaine Motsinger under the MIT license.
+Copyright (c) 2022 Blaine Motsinger.
+
+This is free software, licensed under:
+
+    The GNU General Public License, Version 2, June 1991
