@@ -4,6 +4,8 @@ package RT::Site::Adventurehound;
 
 our $VERSION = '0.01';
 
+=pod
+
 =head1 NAME
 
 RT-Site-Adventurehound
@@ -39,6 +41,23 @@ Add this line:
     rm -rf /opt/rt5/var/mason_data/obj
 
 =item Restart your webserver
+
+=back
+
+=head1 CUSTOMIZATIONS
+
+This extension adds the following customizations:
+
+=over
+
+=item * Custom logo and logo link url
+
+=cut
+
+RT->Config->Set( 'LogoURL', '/static/images/adventurehound.png' );
+RT->Config->Set( 'LogoLinkURL', 'https://adventurehound.io' );
+
+=pod
 
 =back
 
