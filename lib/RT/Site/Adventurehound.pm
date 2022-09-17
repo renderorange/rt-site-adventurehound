@@ -61,6 +61,18 @@ RT->Config->Set( 'LogoLinkURL', 'https://adventurehound.io' );
 
 =back
 
+=head1 OVERLAYS
+
+This extension adds the following overlays:
+
+=over
+
+=item * html/NoAuth/css/elevator-light/BeforeNav
+
+This overlay is from 5.0.3, patched with rt commit 512192c to fix main navigation overlap with custom logo.
+
+=back
+
 =head1 BUGS
 
 Please report bugs at L<GitHub Issues|https://github.com/renderorange/rt-site-adventurehound/issues>.

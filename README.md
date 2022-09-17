@@ -36,6 +36,14 @@ This extension adds the following customizations:
 
 - Custom logo and logo link url
 
+# OVERLAYS
+
+This extension adds the following overlays:
+
+- html/NoAuth/css/elevator-light/BeforeNav
+
+    This overlay is from 5.0.3, patched with rt commit 512192c to fix main navigation overlap with custom logo.
+
 # BUGS
 
 Please report bugs at [GitHub Issues](https://github.com/renderorange/rt-site-adventurehound/issues).
