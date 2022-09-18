@@ -18,6 +18,14 @@ Works with RT 5.0
 
     May need root permissions
 
+- `make initdb`
+
+    Only run this the first time you install this module.
+
+    If you run this twice, you may end up with duplicate data in your database.
+
+    If you are upgrading this module, check for upgrading instructions in case changes need to be made to your database.
+
 - Edit your `/opt/rt5/etc/RT_SiteConfig.pm`
 
     Add this line:
@@ -29,6 +37,14 @@ Works with RT 5.0
         rm -rf /opt/rt5/var/mason_data/obj
 
 - Restart your webserver
+
+# SYSTEM WIDE CHANGES
+
+This extension adds the following system wide changes:
+
+- Administrators group
+
+    The `Administrators` group is added, with `SuperUser` right.
 
 # CUSTOMIZATIONS
 
