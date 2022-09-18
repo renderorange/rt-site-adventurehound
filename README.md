@@ -60,6 +60,12 @@ This extension adds the following overlays:
 
     This overlay is from 5.0.3, patched with rt commit 512192c to fix main navigation overlap with custom logo.
 
+- html/Elements/ShowTransactionAttachments
+- static/css/elevator-dark/main.css
+- static/css/elevator-light/history.css
+
+    These overlays are from 5.0.3, patched with rt commit 7888a6d to remove attachment/filename icons from transactions.
+
 # BUGS
 
 Please report bugs at [GitHub Issues](https://github.com/renderorange/rt-site-adventurehound/issues).
