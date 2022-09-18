@@ -2,7 +2,9 @@ use strict;
 use warnings;
 package RT::Site::Adventurehound;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
+
+=pod
 
 =head1 NAME
 
@@ -42,6 +44,35 @@ Add this line:
 
 =back
 
+=head1 CUSTOMIZATIONS
+
+This extension adds the following customizations:
+
+=over
+
+=item * Custom logo and logo link url
+
+=cut
+
+RT->Config->Set( 'LogoURL', '/static/images/adventurehound.png' );
+RT->Config->Set( 'LogoLinkURL', 'https://adventurehound.io' );
+
+=pod
+
+=back
+
+=head1 OVERLAYS
+
+This extension adds the following overlays:
+
+=over
+
+=item * html/NoAuth/css/elevator-light/BeforeNav
+
+This overlay is from 5.0.3, patched with rt commit 512192c to fix main navigation overlap with custom logo.
+
+=back
+
 =head1 BUGS
 
 Please report bugs at L<GitHub Issues|https://github.com/renderorange/rt-site-adventurehound/issues>.
@@ -52,7 +83,11 @@ Blaine Motsinger E<lt>blaine@renderorange.comE<gt>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (c) 2022 Blaine Motsinger under the MIT license.
+Copyright (c) 2022 Blaine Motsinger.
+
+This is free software, licensed under:
+
+    The GNU General Public License, Version 2, June 1991
 
 =cut
 

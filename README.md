@@ -30,6 +30,20 @@ Works with RT 5.0
 
 - Restart your webserver
 
+# CUSTOMIZATIONS
+
+This extension adds the following customizations:
+
+- Custom logo and logo link url
+
+# OVERLAYS
+
+This extension adds the following overlays:
+
+- html/NoAuth/css/elevator-light/BeforeNav
+
+    This overlay is from 5.0.3, patched with rt commit 512192c to fix main navigation overlap with custom logo.
+
 # BUGS
 
 Please report bugs at [GitHub Issues](https://github.com/renderorange/rt-site-adventurehound/issues).
@@ -40,4 +54,8 @@ Blaine Motsinger <blaine@renderorange.com>
 
 # LICENSE AND COPYRIGHT
 
-Copyright (c) 2022 Blaine Motsinger under the MIT license.
+Copyright (c) 2022 Blaine Motsinger.
+
+This is free software, licensed under:
+
+    The GNU General Public License, Version 2, June 1991
