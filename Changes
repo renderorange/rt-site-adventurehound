@@ -1,4 +1,11 @@
 Revision history for RT-Site-Adventurehound
 
+0.02 2022-09-18
+ - Update license to gpl2
+ - Fix main navigation overlap with custom logo
+ - Add custom logo and logo configuration
+ - Update documentation for custom logo
+ - Update docs for BeforeNav overlay
+
 0.01 2022-09-16
  - Initial version
