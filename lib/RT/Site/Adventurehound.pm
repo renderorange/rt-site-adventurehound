@@ -89,15 +89,17 @@ This extension adds the following overlays:
 
 =item * html/NoAuth/css/elevator-light/BeforeNav
 
-This overlay is from 5.0.3, patched with rt commit 512192c to fix main navigation overlap with custom logo.
-
 =item * html/Elements/ShowTransactionAttachments
 
 =item * static/css/elevator-dark/main.css
 
 =item * static/css/elevator-light/history.css
 
-These overlays are from 5.0.3, patched with rt commit 7888a6d to remove attachment/filename icons from transactions.
+These overlays are from 5.0.3, patched with the following RT commits:
+
+    512192c - Fix main navigation overlap with custom logo
+    7888a6d - Remove attachment/filename icons from transactions
+    0086ec8 - Lighten action buttons in ticket history
 
 =back
 
