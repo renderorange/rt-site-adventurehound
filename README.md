@@ -60,12 +60,14 @@ This extension adds the following overlays:
 - html/Elements/ShowTransactionAttachments
 - static/css/elevator-dark/main.css
 - static/css/elevator-light/history.css
+- static/css/elevator-light/layout.css
 
     These overlays are from 5.0.3, patched with the following RT commits:
 
         512192c - Fix main navigation overlap with custom logo
         7888a6d - Remove attachment/filename icons from transactions
         0086ec8 - Lighten action buttons in ticket history
+        3a6cbf0 - Lighten border colors for history and header
 
 # BUGS
 
