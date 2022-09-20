@@ -1,5 +1,14 @@
 Revision history for RT-Site-Adventurehound
 
+0.03 2022-09-20
+ - Remove attachment/filename icons from transactions
+ - Update docs for icon removal overlays
+ - Ignore tmp dir through git
+ - Lighten action buttons in ticket history
+ - Update docs for lighten action buttons
+ - Lighten border colors for history and header
+ - Update docs for lighten border colors
+
 0.02 2022-09-18
  - Update license to gpl2
  - Fix main navigation overlap with custom logo

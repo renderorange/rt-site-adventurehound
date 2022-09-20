@@ -1,0 +1,20 @@
+use strict;
+use warnings;
+
+our @Groups;
+our @ACL;
+
+@Groups = (
+    {   
+        Name        => 'Administrators', 
+        Description => 'Members with full administrative rights',
+    },
+);
+
+@ACL = (
+    {
+        Right       => 'SuperUser',
+        GroupDomain => 'UserDefined',
+        GroupId     => 'Administrators',
+    },
+);

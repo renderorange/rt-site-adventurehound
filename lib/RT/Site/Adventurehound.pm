@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package RT::Site::Adventurehound;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =pod
 
@@ -30,6 +30,14 @@ Works with RT 5.0
 
 May need root permissions
 
+=item C<make initdb>
+
+Only run this the first time you install this module.
+
+If you run this twice, you may end up with duplicate data in your database.
+
+If you are upgrading this module, check for upgrading instructions in case changes need to be made to your database.
+
 =item Edit your F</opt/rt5/etc/RT_SiteConfig.pm>
 
 Add this line:
@@ -41,6 +49,18 @@ Add this line:
     rm -rf /opt/rt5/var/mason_data/obj
 
 =item Restart your webserver
+
+=back
+
+=head1 SYSTEM WIDE CHANGES
+
+This extension adds the following system wide changes:
+
+=over
+
+=item * Administrators group
+
+The C<Administrators> group is added, with C<SuperUser> right.
 
 =back
 
@@ -69,7 +89,20 @@ This extension adds the following overlays:
 
 =item * html/NoAuth/css/elevator-light/BeforeNav
 
-This overlay is from 5.0.3, patched with rt commit 512192c to fix main navigation overlap with custom logo.
+=item * html/Elements/ShowTransactionAttachments
+
+=item * static/css/elevator-dark/main.css
+
+=item * static/css/elevator-light/history.css
+
+=item * static/css/elevator-light/layout.css
+
+These overlays are from 5.0.3, patched with the following RT commits:
+
+    512192c - Fix main navigation overlap with custom logo
+    7888a6d - Remove attachment/filename icons from transactions
+    0086ec8 - Lighten action buttons in ticket history
+    3a6cbf0 - Lighten border colors for history and header
 
 =back
 
