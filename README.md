@@ -51,6 +51,7 @@ This extension adds the following system wide changes:
 This extension adds the following customizations:
 
 - Custom logo and logo link url
+- Custom CSS stylesheet
 
 # OVERLAYS
 
