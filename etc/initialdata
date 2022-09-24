@@ -4,6 +4,7 @@ use warnings;
 our @Groups;
 our @ACL;
 our @Queues;
+our @CustomFields;
 
 @Groups = (
     {   
@@ -26,5 +27,16 @@ our @Queues;
         Description       => 'Software development',
         CorrespondAddress => '',
         CommentAddress    => '',
+    },
+);
+
+@CustomFields = (
+    {
+        Name        => 'Organization',
+        Type        => 'SelectSingle',
+        LookupType  => 'RT::Queue-RT::Ticket',
+        ValuesClass => 'RT::CustomFieldValues::Organization',
+        Pattern     => '(?#Mandatory).',
+        Queue       => 'Development',
     },
 );
