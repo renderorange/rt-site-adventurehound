@@ -1,5 +1,17 @@
 Revision history for RT-Site-Adventurehound
 
+0.04 2022-09-24
+ - Add custom css stylesheet
+ - Update docs for custom css stylesheet
+ - Add Development queue
+ - Update docs for Development queue
+ - Add Organization custom field
+ - Update docs for Organization custom field
+ - Add Project custom field
+ - Updates docs for Project custom field
+ - Set install target to 5.0.3
+ - Update docs for install target to 5.0.3
+
 0.03 2022-09-20
  - Remove attachment/filename icons from transactions
  - Update docs for icon removal overlays
