@@ -51,13 +51,17 @@ This extension adds the following system wide changes:
 
     The following custom fields are added:
 
+    For the Development queue:
+
     - Organization
+    - Project
 
 - CustomFieldValues sources
 
     Custom field values are loaded from the following sources:
 
-    - RT::CustomFieldValues::Organization
+    - RT::CustomFieldValues::Development::Organization
+    - RT::CustomFieldValues::Development::Project
 
 # CUSTOMIZATIONS
 
