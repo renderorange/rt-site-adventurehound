@@ -68,9 +68,13 @@ The C<Administrators> group is added, with C<SuperUser> right.
 
 The following custom fields are added:
 
+For the Development queue:
+
 =over
 
 =item * Organization
+
+=item * Project
 
 =back
 
@@ -80,18 +84,21 @@ Custom field values are loaded from the following sources:
 
 =over
 
-=item * RT::CustomFieldValues::Organization
+=item * RT::CustomFieldValues::Development::Organization
+
+=item * RT::CustomFieldValues::Development::Project
 
 =cut
 
 RT->Config->Set( 'CustomFieldValuesSources',
-                 'RT::CustomFieldValues::Organization',
+                 'RT::CustomFieldValues::Development::Organization',
+                 'RT::CustomFieldValues::Development::Project',
 );
 
 RT->Config->Set( 'CustomFieldGroupings',
     'RT::Ticket' => {
         'Development' => [
-            'Details' => [ 'Organization', ],
+            'Details' => [ 'Organization', 'Project', ],
         ],
     },
 );

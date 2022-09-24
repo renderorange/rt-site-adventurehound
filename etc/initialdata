@@ -35,8 +35,15 @@ our @CustomFields;
         Name        => 'Organization',
         Type        => 'SelectSingle',
         LookupType  => 'RT::Queue-RT::Ticket',
-        ValuesClass => 'RT::CustomFieldValues::Organization',
+        ValuesClass => 'RT::CustomFieldValues::Development::Organization',
         Pattern     => '(?#Mandatory).',
+        Queue       => 'Development',
+    },
+    {
+        Name        => 'Project',
+        Type        => 'SelectSingle',
+        LookupType  => 'RT::Queue-RT::Ticket',
+        ValuesClass => 'RT::CustomFieldValues::Development::Project',
         Queue       => 'Development',
     },
 );
