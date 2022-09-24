@@ -1,4 +1,4 @@
-package RT::CustomFieldValues::Organization;
+package RT::CustomFieldValues::Development::Organization;
 
 use strict;
 use warnings;
