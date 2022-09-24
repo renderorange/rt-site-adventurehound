@@ -3,6 +3,7 @@ use warnings;
 
 our @Groups;
 our @ACL;
+our @Queues;
 
 @Groups = (
     {   
@@ -16,5 +17,14 @@ our @ACL;
         Right       => 'SuperUser',
         GroupDomain => 'UserDefined',
         GroupId     => 'Administrators',
+    },
+);
+
+@Queues = (
+    {
+        Name              => 'Development',
+        Description       => 'Software development',
+        CorrespondAddress => '',
+        CommentAddress    => '',
     },
 );

@@ -46,6 +46,8 @@ This extension adds the following system wide changes:
 
     The `Administrators` group is added, with `SuperUser` right.
 
+- Development queue
+
 # CUSTOMIZATIONS
 
 This extension adds the following customizations:
