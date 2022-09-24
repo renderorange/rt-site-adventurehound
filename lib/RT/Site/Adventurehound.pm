@@ -62,6 +62,8 @@ This extension adds the following system wide changes:
 
 The C<Administrators> group is added, with C<SuperUser> right.
 
+=item * Development queue
+
 =back
 
 =head1 CUSTOMIZATIONS
