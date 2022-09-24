@@ -79,6 +79,14 @@ RT->Config->Set( 'LogoLinkURL', 'https://adventurehound.io' );
 
 =pod
 
+=item * Custom CSS stylesheet
+
+=cut
+
+RT->AddStyleSheets( 'rt-site-adventurehound.css' );
+
+=pod
+
 =back
 
 =head1 OVERLAYS
