@@ -10,6 +10,10 @@ Custom code and configuration for Adventurehound RT.
 
 Works with RT 5.0
 
+This extension includes patched files from RT 5.0.3.  Installation is minimally limited to 5.0.3, but allows newer versions of RT.
+
+If installing on an RT newer than 5.0.3, the patched overlays may be out of date with changes in that version of RT.
+
 # INSTALLATION
 
 - `perl Makefile.PL`
@@ -17,14 +21,6 @@ Works with RT 5.0
 - `make install`
 
     May need root permissions
-
-- `make initdb`
-
-    Only run this the first time you install this module.
-
-    If you run this twice, you may end up with duplicate data in your database.
-
-    If you are upgrading this module, check for upgrading instructions in case changes need to be made to your database.
 
 - Edit your `/opt/rt5/etc/RT_SiteConfig.pm`
 
@@ -36,6 +32,14 @@ Works with RT 5.0
 
         rm -rf /opt/rt5/var/mason_data/obj
 
+- `make initdb`
+
+    Only run this the first time you install this module.
+
+    If you run this twice, you may end up with duplicate data in your database.
+
+    If you are upgrading this module, check for upgrading instructions in case changes need to be made to your database.
+
 - Restart your webserver
 
 # SYSTEM WIDE CHANGES
@@ -46,11 +50,29 @@ This extension adds the following system wide changes:
 
     The `Administrators` group is added, with `SuperUser` right.
 
+- Development queue
+- CustomFields
+
+    The following custom fields are added:
+
+    For the Development queue:
+
+    - Organization
+    - Project
+
+- CustomFieldValues sources
+
+    Custom field values are loaded from the following sources:
+
+    - RT::CustomFieldValues::Development::Organization
+    - RT::CustomFieldValues::Development::Project
+
 # CUSTOMIZATIONS
 
 This extension adds the following customizations:
 
 - Custom logo and logo link url
+- Custom CSS stylesheet
 
 # OVERLAYS
 

@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package RT::Site::Adventurehound;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 =pod
 
@@ -18,6 +18,10 @@ Custom code and configuration for Adventurehound RT.
 
 Works with RT 5.0
 
+This extension includes patched files from RT 5.0.3.  Installation is minimally limited to 5.0.3, but allows newer versions of RT.
+
+If installing on an RT newer than 5.0.3, the patched overlays may be out of date with changes in that version of RT.
+
 =head1 INSTALLATION
 
 =over
@@ -30,14 +34,6 @@ Works with RT 5.0
 
 May need root permissions
 
-=item C<make initdb>
-
-Only run this the first time you install this module.
-
-If you run this twice, you may end up with duplicate data in your database.
-
-If you are upgrading this module, check for upgrading instructions in case changes need to be made to your database.
-
 =item Edit your F</opt/rt5/etc/RT_SiteConfig.pm>
 
 Add this line:
@@ -47,6 +43,14 @@ Add this line:
 =item Clear your mason cache
 
     rm -rf /opt/rt5/var/mason_data/obj
+
+=item C<make initdb>
+
+Only run this the first time you install this module.
+
+If you run this twice, you may end up with duplicate data in your database.
+
+If you are upgrading this module, check for upgrading instructions in case changes need to be made to your database.
 
 =item Restart your webserver
 
@@ -62,6 +66,51 @@ This extension adds the following system wide changes:
 
 The C<Administrators> group is added, with C<SuperUser> right.
 
+=item * Development queue
+
+=item * CustomFields
+
+The following custom fields are added:
+
+For the Development queue:
+
+=over
+
+=item * Organization
+
+=item * Project
+
+=back
+
+=item * CustomFieldValues sources
+
+Custom field values are loaded from the following sources:
+
+=over
+
+=item * RT::CustomFieldValues::Development::Organization
+
+=item * RT::CustomFieldValues::Development::Project
+
+=cut
+
+RT->Config->Set( 'CustomFieldValuesSources',
+                 'RT::CustomFieldValues::Development::Organization',
+                 'RT::CustomFieldValues::Development::Project',
+);
+
+RT->Config->Set( 'CustomFieldGroupings',
+    'RT::Ticket' => {
+        'Development' => [
+            'Details' => [ 'Organization', 'Project', ],
+        ],
+    },
+);
+
+=pod
+
+=back
+
 =back
 
 =head1 CUSTOMIZATIONS
@@ -76,6 +125,14 @@ This extension adds the following customizations:
 
 RT->Config->Set( 'LogoURL', '/static/images/adventurehound.png' );
 RT->Config->Set( 'LogoLinkURL', 'https://adventurehound.io' );
+
+=pod
+
+=item * Custom CSS stylesheet
+
+=cut
+
+RT->AddStyleSheets( 'rt-site-adventurehound.css' );
 
 =pod
 
