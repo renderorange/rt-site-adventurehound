@@ -10,6 +10,10 @@ Custom code and configuration for Adventurehound RT.
 
 Works with RT 5.0
 
+This extension includes patched files from RT 5.0.3.  Installation is minimally limited to 5.0.3, but allows newer versions of RT.
+
+If installing on an RT newer than 5.0.3, the patched overlays may be out of date with changes in that version of RT.
+
 # INSTALLATION
 
 - `perl Makefile.PL`
