@@ -50,23 +50,6 @@ This extension adds the following system wide changes:
 
     The `Administrators` group is added, with `SuperUser` right.
 
-- Development queue
-- CustomFields
-
-    The following custom fields are added:
-
-    For the Development queue:
-
-    - Organization
-    - Project
-
-- CustomFieldValues sources
-
-    Custom field values are loaded from the following sources:
-
-    - RT::CustomFieldValues::Development::Organization
-    - RT::CustomFieldValues::Development::Project
-
 # CUSTOMIZATIONS
 
 This extension adds the following customizations:
