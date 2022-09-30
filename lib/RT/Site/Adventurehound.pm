@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package RT::Site::Adventurehound;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 =pod
 
@@ -65,51 +65,6 @@ This extension adds the following system wide changes:
 =item * Administrators group
 
 The C<Administrators> group is added, with C<SuperUser> right.
-
-=item * Development queue
-
-=item * CustomFields
-
-The following custom fields are added:
-
-For the Development queue:
-
-=over
-
-=item * Organization
-
-=item * Project
-
-=back
-
-=item * CustomFieldValues sources
-
-Custom field values are loaded from the following sources:
-
-=over
-
-=item * RT::CustomFieldValues::Development::Organization
-
-=item * RT::CustomFieldValues::Development::Project
-
-=cut
-
-RT->Config->Set( 'CustomFieldValuesSources',
-                 'RT::CustomFieldValues::Development::Organization',
-                 'RT::CustomFieldValues::Development::Project',
-);
-
-RT->Config->Set( 'CustomFieldGroupings',
-    'RT::Ticket' => {
-        'Development' => [
-            'Details' => [ 'Organization', 'Project', ],
-        ],
-    },
-);
-
-=pod
-
-=back
 
 =back
 

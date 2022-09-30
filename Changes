@@ -1,5 +1,8 @@
 Revision history for RT-Site-Adventurehound
 
+0.05 2022-09-30
+ - Remove Development queue and custom fields
+
 0.04 2022-09-24
  - Add custom css stylesheet
  - Update docs for custom css stylesheet
