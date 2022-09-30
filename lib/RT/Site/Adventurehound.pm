@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package RT::Site::Adventurehound;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 =pod
 
