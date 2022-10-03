@@ -91,6 +91,36 @@ RT->AddStyleSheets( 'rt-site-adventurehound.css' );
 
 =pod
 
+=item * Scrub HTML color attributes
+
+This extension sets the ALLOWED_ATTRIBUTES hash to automatically scrub html color attributes when rendering html in ticket transactions.
+
+=cut
+
+$RT::Interface::Web::Scrubber::ALLOWED_ATTRIBUTES{color} = 0;
+$RT::Interface::Web::Scrubber::ALLOWED_ATTRIBUTES{style} = qr{
+        ^(?:\s*
+            (?:
+               text-align: \s* \w+                  |
+               font-size: \s* [\w.\-]+              |
+               font-family: \s* [\w\s"',.\-]+       |
+               font-weight: \s* [\w\-]+             |
+
+               border-style: \s* \w+                |
+               border-color: \s* [#\w]+             |
+               border-width: \s* [\s\w]+            |
+               padding: \s* [\s\w]+                 |
+               margin: \s* [\s\w]+                  |
+
+               # MS Office styles, which are probably fine.  If we don't, then any
+               # associated styles in the same attribute get stripped.
+               mso-[\w\-]+?: \s* [\w\s"',.\-]+
+            )\s* ;? \s*)
+         +$ # one or more of these allowed properties from here 'till sunset
+}ix;
+
+=pod
+
 =back
 
 =head1 OVERLAYS
